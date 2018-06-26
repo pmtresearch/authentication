@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PMT Research Institute - Data Analysis</title>
+    <style type="text/css">
+        * { box-sizing: border-box; }
+    </style>
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Open+Sans:600">
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css"> 
+
+</head>
+
+<body>
+<div class="login-wrap">   
+    <div class="login-html">
+        <div class="login-form">
+	<h3>Foundation Members</h3>
+	<button id="callGraphButton" type="button" class="button" onclick="callGraphApi()">Log In</button>
+	<div id="errorMessage" class="text-danger"></div>
+	<button id="signOutButton" type="button" class="button" onclick="signOut()">Log Out</button>
+    </div>
+  
+    <div class="hidden">
+        <h3>API Resonse</h3>
+        <pre class="well" id="graphResponse"></pre>
+    </div>
+
+    <div class="hidden">
+        <h3>Access Token</h3>
+        <pre class="well" id="accessToken"></pre>
+    </div>
+
+    <div class="hidden">
+        <h3>ID Token Claims</h3>
+        <pre class="well" id="userInfo"></pre>
+    </div>
+</div>
+</body>
+
+    <script type="text/javascript" src="login/index.js"></script>
+    <script type="text/javascript" src="login/app.js"></script>
+
+    <!-- This app uses cdn to reference msal.js -->    
+    <script type="text/javascript" src="login/msal.js"></script>
+    <script type="text/javascript" src="login/msalconfig.js"></script>
+
+    <!-- The 'bluebird' and 'fetch' references below are required if you need to run this application on Internet Explorer -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.4/bluebird.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+
+</html>
